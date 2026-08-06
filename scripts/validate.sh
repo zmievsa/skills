@@ -59,7 +59,7 @@ unsafe_files="$(
 
 secret_hits="$(
   rg -l --hidden --no-messages \
-    --glob '!.git/**' \
+    --glob '!**/.git/**' \
     --glob '!**/scripts/validate.sh' \
     -e '-----BEGIN ([A-Z0-9 ]+ )?PRIVATE KEY-----' \
     -e 'sk-[A-Za-z0-9_-]{20,}' \
