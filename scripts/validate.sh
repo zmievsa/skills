@@ -45,6 +45,20 @@ for skill in "${skills[@]}"; do
   [[ "$declared_name" == "$skill" ]] \
     || fail "skills/$skill declares name '$declared_name'"
 
+  legal_notice_hits="$(
+    rg -n -i \
+      -e 'copyright|©|all rights reserved' \
+      -e 'SPDX-License-Identifier' \
+      -e '(distributed|licensed) under .{0,40}license' \
+      -e '(MIT|Apache|BSD) License' \
+      -e '^#{1,6}[[:space:]]+Attribution' \
+      -e '(originally )?authored by' \
+      -e 'third-party notices?' \
+      "$skill_dir/SKILL.md" || true
+  )"
+  [[ -z "$legal_notice_hits" ]] \
+    || fail "skills/$skill/SKILL.md contains copyright, license, or attribution text: $legal_notice_hits"
+
   uvx --from skills-ref agentskills validate "$skill_dir"
 done
 

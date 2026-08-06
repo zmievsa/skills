@@ -5,8 +5,6 @@ description: Use when reproducing or fixing bugs, testing behavior, reviewing ex
 
 # Testing
 
-Copyright (c) 2026 Stanislav Zmiev. Distributed under the MIT License.
-
 ## Public behaviors
 
 We test for a single reason: to verify whether public behaviors are working as expected. Most rules we will write below are going to be in one way or another based on this law. Therefore, we add a new test if and only if we are changing/fixing a user-visible behavior that is uncovered by older tests -- both must be true for addition.
