@@ -5,7 +5,7 @@ Installable skills maintained by [Stanislav Zmiev](https://github.com/zmievsa).
 | Skill | Purpose |
 | --- | --- |
 | `testing` | Test observable behavior with realistic boundaries and direct assertions. |
-| `typings` | Apply strict modern Python typing rules. Originally authored by [GAO Hongnan](https://github.com/gao-hongnan); see [NOTICE.md](NOTICE.md). |
+| `typings` | Apply strict modern Python typing rules. Originally authored by [GAO Hongnan](https://github.com/gao-hongnan); see its [attribution](skills/typings/ATTRIBUTION.md). |
 
 ## Install
 

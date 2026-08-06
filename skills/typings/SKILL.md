@@ -11,14 +11,6 @@ description: >-
 
 # Python Type-Safety Rules
 
-## Attribution
-
-Originally authored by [GAO Hongnan](https://github.com/gao-hongnan) for the
-[OmniAgents Python plugin](https://github.com/gao-hongnan/omniagents/tree/4fbae4de3eccd62585d7218e5f788b3588141552/plugins/python/skills/typings).
-This edition was adapted and extended by Stanislav Zmiev. The upstream skill
-and this edition are distributed under the MIT License; see the repository
-`NOTICE.md` for provenance details.
-
 This project maintains a strict-by-default type-safety bar across every
 configured type checker. The exact set is recorded in the consuming project's
 tooling config (commonly mypy, pyright, pyrefly, ruff, ty, and a `typecheck`
