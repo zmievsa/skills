@@ -1,0 +1,4 @@
+interface:
+  display_name: "Testing"
+  short_description: "Test observable behavior at realistic boundaries"
+  default_prompt: "Use $testing to choose and run the right tests for this change."

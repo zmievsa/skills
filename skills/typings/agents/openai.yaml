@@ -1,0 +1,4 @@
+interface:
+  display_name: "Python Typings"
+  short_description: "Apply strict modern Python type-safety rules"
+  default_prompt: "Use $typings to review this Python code for strict type safety."
