@@ -9,6 +9,12 @@ Installable skills maintained by [Stanislav Zmiev](https://github.com/zmievsa).
 
 ## Install
 
+List the available skills without installing them:
+
+```bash
+npx -y skills add zmievsa/skills --list
+```
+
 Using the Skills CLI:
 
 ```bash
