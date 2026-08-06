@@ -1,6 +1,6 @@
 ---
 name: testing
-description: Run when you need to reproduce/fix a bug or test something, or to work with old tests, or to create new tests
+description: Use when reproducing or fixing bugs, testing behavior, reviewing existing tests, or deciding whether to add or change regression coverage.
 ---
 
 # Testing
