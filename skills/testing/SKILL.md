@@ -68,13 +68,6 @@ Name tests using the `what`, `when`, `expected` convention:
 - Real-provider E2Es should prove only what cheaper tests cannot, using the shortest session that preserves that evidence.
 - We should generally run only the tests whose behavior surfaces we could've broken with our changes so that we can deliver fast (unless CI is configured otherwise)
 
-## Finding subtle bugs
-
-- Think about areas likely to have subtle bugs before implementing; for each, state likely mistakes and plausible alternative interpretations, then come up with a check where the results differ (prefer asymmetric / boundary examples on both sides of the boundary)
-- After implementing, for high risk areas, independently re-derive the result without context on production code and compare
-- When feasible, use property-based testing or randomized inputs to try to explore the space, minimizing effort on no-panic or no-crash randomization
-- When randomizing, lean towards inputs that will explore interesting state and code paths (don't just naively randomize inputs that all fall into the same error paths); this may require structured random inputs
-
 ## Assertion quality
 
 Tests must rarely or never rely on asserting something that "should correlate" with correct behavior. They must assert the correct behavior/response itself. For example, testing that our bot tried to access a resource with the correct arguments/headers/config is not a good e2e test. Testing that it was actually physically let in is a good test. Correlation = meh, causation = good in tests.
