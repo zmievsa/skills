@@ -1,6 +1,6 @@
 ---
 name: testing
-description: Use when reproducing or fixing bugs, testing behavior, reviewing existing tests, or deciding whether to add or change regression coverage.
+description: Use any time you need to test anything or write tests for anything, including bug reproduction, test reviews, regression coverage, etc.
 ---
 
 # Testing

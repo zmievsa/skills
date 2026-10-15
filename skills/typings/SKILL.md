@@ -7,6 +7,22 @@ description: >-
   TypedDict / ReadOnly, magic strings / numbers vs Literal / StrEnum / Final,
   NewType vs aliases, or any time mypy / pyright / pyrefly / ty is
   configured, run, or failing.
+when_to_use: >-
+  Trigger for Python files, pyproject typing configuration, strict checker
+  failures, type annotation design, runtime annotation introspection,
+  PEP 695 generics, PEP 696 defaults, PEP 705 ReadOnly TypedDict keys,
+  PEP 742 TypeIs predicates, PEP 649 / PEP 749 deferred annotations, decorator
+  signatures, Protocol boundaries, NewType identifiers, enum/literal choices,
+  magic-string and magic-number promotion, stringly-typed parameters, or
+  public API typing reviews.
+disable-model-invocation: false
+user-invocable: true
+allowed-tools: []
+model: inherit
+paths:
+  - "**/*.py"
+  - "**/pyproject.toml"
+shell: bash
 ---
 
 # Python Type-Safety Rules
