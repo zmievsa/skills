@@ -41,6 +41,7 @@ There are many classifications of tests but we only reason in:
 
 - E2E tests: truest "user-like" environments -- real frontend, real backend, realish payments (albeit in some sort of provider-made sandbox where we can't actually spend money), real clicks, production-like context -- everything should be as close to how a user would approach it as possible. We want to have at least one such test for every major "user flow" but edge cases and invariants are to be covered by granular tests unless the current project specifically prefers e2e-only approach
 - Granular tests: once we established that the main flow works with e2e tests, we might sometimes need more granular tests for testing edge cases. Granular tests omit the surfaces that are irrelevant for the test -- be it a frontend, a backend, another service, an API provider, etc. For example, if I already tested that clicking buttons to submit the order works, I now want a dozen more tests that would check all possible invariants on both backend and frontend separately. However, granular tests still must not mock the database or internal interfaces: mocking and stubbing are reserved for external services that would be hard/costly to run on every test. Be careful: granular tests do not replace e2e tests for their behavior surface, they "supplement" e2e tests -- i.e. the main surface is covered by the e2e test, and then each possible invariant and edge case are covered by the granular test.
+- Coverage: before calling a suite done, give every user-visible rule of the public interface at least one granular test; covering only the main flows is not enough. Tests and their fixtures may not depend on internal code or internal storage.
 - Benchmarks: tests used to assess the performance/quality of some specific surface such as performance benchmarks or LLM evals running against agents/LLM calls. Unlike tests, benchmarks should not run as often -- they should run only when we are doing performance-specific work or fixing performance bugs or, if the project rules prefer so, on a daily/weekly basis as a regular job.
 
 (this skill intentionally doesn't use terms such as "unit" and "integration" testing since they have been tainted with too many poisonous connotations over the years)
@@ -67,6 +68,10 @@ Name tests using the `what`, `when`, `expected` convention:
 - Expensive setup must be opt-in and run only for tests that need it.
 - Real-provider E2Es should prove only what cheaper tests cannot, using the shortest session that preserves that evidence.
 - We should generally run only the tests whose behavior surfaces we could've broken with our changes so that we can deliver fast (unless CI is configured otherwise)
+
+## Choosing inputs
+
+A test proves a rule only if a plausible wrong implementation would fail it. Combine features that act on the same state.
 
 ## Assertion quality
 
