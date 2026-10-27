@@ -1,0 +1,6 @@
+interface:
+  display_name: "Testing Reviewer"
+  short_description: "Review tests for slow or bug-hiding anti-patterns"
+  default_prompt: "Use $testing-reviewer to review these tests for anti-patterns."
+policy:
+  allow_implicit_invocation: false
