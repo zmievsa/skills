@@ -59,7 +59,21 @@ for skill in "${skills[@]}"; do
   [[ -z "$legal_notice_hits" ]] \
     || fail "skills/$skill/SKILL.md contains copyright, license, or attribution text: $legal_notice_hits"
 
-  uvx --from skills-ref agentskills validate "$skill_dir"
+  # Claude Code frontmatter fields aren't in the Agent Skills spec (allowed-tools is,
+  # but Claude Code takes it as a YAML list), so validate a copy without them.
+  spec_copy="$(mktemp -d)/$skill"
+  cp -R "$skill_dir" "$spec_copy"
+  awk '
+    NR == 1 && $0 == "---" { in_frontmatter = 1; print; next }
+    in_frontmatter && $0 == "---" { in_frontmatter = 0 }
+    in_frontmatter && /^[^[:space:]]/ {
+      skipping = ($1 ~ /^(when_to_use|argument-hint|disable-model-invocation|user-invocable|allowed-tools|model|effort|context|agent|hooks|paths|shell):$/)
+    }
+    in_frontmatter && skipping { next }
+    { print }
+  ' "$skill_dir/SKILL.md" > "$spec_copy/SKILL.md"
+  uvx --from skills-ref agentskills validate "$spec_copy"
+  rm -rf "$(dirname "$spec_copy")"
 done
 
 symlinks="$(find "$repo_root" -path "$repo_root/.git" -prune -o -type l -print)"
