@@ -68,6 +68,7 @@ Name tests using the `what`, `when`, `expected` convention:
 - Expensive setup must be opt-in and run only for tests that need it.
 - Real-provider E2Es should prove only what cheaper tests cannot, using the shortest session that preserves that evidence.
 - We should generally run only the tests whose behavior surfaces we could've broken with our changes so that we can deliver fast (unless CI is configured otherwise)
+- A red or silently skipped test is everyone's problem, even if it was failing before your change: fix it, or stop and report it, before doing new work. Never hand off with a red suite.
 
 ## Choosing inputs
 
