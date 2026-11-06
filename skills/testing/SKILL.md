@@ -5,6 +5,8 @@ description: Use any time you need to test anything or write tests for anything,
 
 # Testing
 
+Whenever covering a feature with tests, it's helpful to ask yourself: "How do we make this change FULLY verifiable?".
+
 ## Public behaviors
 
 We test for a single reason: to verify whether public behaviors are working as expected. Most rules we will write below are going to be in one way or another based on this law. Therefore, we add a new test if and only if we are changing/fixing a user-visible behavior that is uncovered by older tests -- both must be true for addition.
