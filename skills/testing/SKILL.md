@@ -68,6 +68,7 @@ Name tests using the `what`, `when`, `expected` convention:
 
 - Each test must be completely independent from other tests -- this means that ordering / parallelization / isolation when running tests should not affect the result at all. We should achieve this by using temporary per-test accounts/db entities/queue prefixes/etc and not using global "cleanup all data" type of fixtures in tests. However, whenever we could achieve greater speeds by reusing infra while keeping the tests "mostly" isolated (i.e. tests interfering with one another is impossible or close to impossible) -- we should do it if it speeds up running the tests
 - Expensive setup must be opt-in and run only for tests that need it.
+- Own every sign-in a test needs. Use a dedicated test account the agent can sign into by itself, keep test devices off the user's real accounts, and save the signed-in state so later runs skip sign-in. Ask the user only for what no test account can give.
 - Real-provider E2Es should prove only what cheaper tests cannot, using the shortest session that preserves that evidence.
 - We should generally run only the tests whose behavior surfaces we could've broken with our changes so that we can deliver fast (unless CI is configured otherwise)
 - A red or silently skipped test is everyone's problem, even if it was failing before your change: fix it, or stop and report it, before doing new work. Never hand off with a red suite.
