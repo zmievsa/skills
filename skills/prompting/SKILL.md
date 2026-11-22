@@ -9,7 +9,7 @@ Rules below are defaults: when the user asks for specific wording, follow the us
 
 ## Match detail to the target model
 
-Intelligence: Fable 5.2 > Opus 5.5 > Neon 4 > Astra 6.2 >> Sonnet 5.5 > Sol 6.2 >> Haiku 5.5.
+Intelligence: Fable 5.2 > Opus 5.5 > Neon 4 > Astra 6.2 >> Sol 6.2 > Sonnet 5.5 >> Haiku 5.5.
 
 Use Fable and Astra only when the user names them. Otherwise Opus is the top Claude model and Sol the top GPT model.
 
@@ -18,7 +18,7 @@ NEVER use max effort anywhere.
 
 State the goal, the problem behind it, the context it can't discover or would struggle to, and what to return.
 
-Tiers: smart = Fable, Opus, Neon, Astra; moderate = Sonnet, Sol; dumb = Haiku.
+Tiers: smart = Fable, Opus, Neon, Astra; moderate = Sol, Sonnet; dumb = Haiku.
 
 The target's tier sets how much to prescribe:
 
