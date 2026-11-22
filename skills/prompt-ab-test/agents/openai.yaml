@@ -1,0 +1,5 @@
+interface:
+  display_name: "Prompt A/B Test"
+  short_description: "Replay a real case with old and new prompt"
+policy:
+  allow_implicit_invocation: false

@@ -6,6 +6,8 @@ Installable skills maintained by [Stanislav Zmiev](https://github.com/zmievsa).
 | --- | --- |
 | `testing` | Test observable behavior with realistic boundaries and direct assertions. |
 | `testing-reviewer` | Review tests for anti-patterns that slow them down or let bugs through. Manual invocation only. |
+| `prompt-ab-test` | A/B test a change to a prompt, skill or rule by replaying a real situation with the old and the new version. Manual invocation only. |
+| `prompting` | Write and edit instructions for other agents: how much to prescribe per model tier, and how to keep reusable prompts from overfitting. Manual invocation only in Codex. |
 | `typings` | Apply strict modern Python typing rules. Originally authored by [GAO Hongnan](https://github.com/gao-hongnan); see its [attribution](skills/typings/ATTRIBUTION.md). |
 
 ## Install
@@ -19,7 +21,7 @@ npx -y skills add zmievsa/skills --list
 Using the Skills CLI:
 
 ```bash
-npx -y skills add zmievsa/skills --skill testing testing-reviewer typings --agent codex --global --yes
+npx -y skills add zmievsa/skills --skill testing testing-reviewer typings prompting prompt-ab-test --agent codex --global --yes
 ```
 
 Using GitHub CLI:
@@ -28,6 +30,8 @@ Using GitHub CLI:
 gh skill install zmievsa/skills testing --agent codex --scope user
 gh skill install zmievsa/skills testing-reviewer --agent codex --scope user
 gh skill install zmievsa/skills typings --agent codex --scope user
+gh skill install zmievsa/skills prompting --agent codex --scope user
+gh skill install zmievsa/skills prompt-ab-test --agent codex --scope user
 ```
 
 To install a fixed release with GitHub CLI, add `--pin v0.1.0`.
