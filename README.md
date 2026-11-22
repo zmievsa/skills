@@ -8,7 +8,7 @@ Installable skills maintained by [Stanislav Zmiev](https://github.com/zmievsa).
 | `testing` | Test observable behavior with realistic boundaries and direct assertions. |
 | `testing-reviewer` | Review tests for anti-patterns that slow them down or let bugs through. Manual invocation only. |
 | `prompt-ab-test` | A/B test a change to a prompt, skill or rule by replaying a real situation with the old and the new version. Manual invocation only. |
-| `prompting` | Write and edit instructions for other agents: how much to prescribe per model tier, and how to keep reusable prompts from overfitting. Manual invocation only in Codex. |
+| `prompting` | Write and edit instructions for other agents: how much to prescribe per model tier, and how to keep reusable prompts from overfitting. |
 | `typings` | Apply strict modern Python typing rules. Originally authored by [GAO Hongnan](https://github.com/gao-hongnan); see its [attribution](skills/typings/ATTRIBUTION.md). |
 
 ## Install
