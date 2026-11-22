@@ -1,0 +1,6 @@
+interface:
+  display_name: "Sub Cost"
+  short_description: "Share of my AI subscriptions a workload uses"
+  default_prompt: "Use $sub-cost to work out what share of my subscriptions this workload uses."
+policy:
+  allow_implicit_invocation: false

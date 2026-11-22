@@ -4,6 +4,7 @@ Installable skills maintained by [Stanislav Zmiev](https://github.com/zmievsa).
 
 | Skill | Purpose |
 | --- | --- |
+| `sub-cost` | Work out what share of your AI subscriptions a job, thread or workload uses, by the Priors method. Manual invocation only. |
 | `testing` | Test observable behavior with realistic boundaries and direct assertions. |
 | `testing-reviewer` | Review tests for anti-patterns that slow them down or let bugs through. Manual invocation only. |
 | `prompt-ab-test` | A/B test a change to a prompt, skill or rule by replaying a real situation with the old and the new version. Manual invocation only. |
@@ -21,7 +22,7 @@ npx -y skills add zmievsa/skills --list
 Using the Skills CLI:
 
 ```bash
-npx -y skills add zmievsa/skills --skill testing testing-reviewer typings prompting prompt-ab-test --agent codex --global --yes
+npx -y skills add zmievsa/skills --skill testing testing-reviewer typings prompting prompt-ab-test sub-cost --agent codex --global --yes
 ```
 
 Using GitHub CLI:
@@ -32,6 +33,7 @@ gh skill install zmievsa/skills testing-reviewer --agent codex --scope user
 gh skill install zmievsa/skills typings --agent codex --scope user
 gh skill install zmievsa/skills prompting --agent codex --scope user
 gh skill install zmievsa/skills prompt-ab-test --agent codex --scope user
+gh skill install zmievsa/skills sub-cost --agent codex --scope user
 ```
 
 To install a fixed release with GitHub CLI, add `--pin v0.1.0`.
