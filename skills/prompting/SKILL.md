@@ -11,7 +11,7 @@ Rules below are defaults: when the user asks for specific wording, follow the us
 
 Intelligence: Fable 5.2 > Opus 5.5 > Neon 4 > Astra 6.2 >> Sol 6.2 > Sonnet 5.5 >> Haiku 5.5.
 
-Use Fable and Astra only when the user names them. Otherwise Opus is the top Claude model and Sol the top GPT model.
+Use Fable and Astra as subagents only when the user asks for them. Otherwise Opus is the top Claude model and Sol the top GPT model.
 
 NEVER use more than high effort on Fable/Opus/Astra
 NEVER use max effort anywhere.
