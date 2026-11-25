@@ -283,8 +283,7 @@ comment.
 This skill is project policy, not a complete upstream reference. When applying
 it to unfamiliar APIs, version-sensitive behavior, tool/checker disagreement,
 or anything that may have changed since the skill was written, verify current
-behavior against primary docs. Prefer Context7 MCP when available. If it is
-unavailable, use web search restricted to official sources.
+behavior against primary docs, using web search restricted to official sources.
 
 Primary sources:
 
